@@ -4,10 +4,11 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 var buf = new Buffer(25);
-buf.write("Hello toi", "utf-8");
+len = buf.write("Hello toi");
+console.log(buf.toString());
 
 var texte = fs.readFile("./index.html");
-console.log(texte);
+console.log(texte.toString);
 
 app.get('/', function(request, response) {
   response.send("hell");

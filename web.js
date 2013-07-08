@@ -4,6 +4,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 var buf = new Buffer(25);
+buf.write("Hello you", "utf-8");
 
 app.get('/', function(request, response) {
   response.send("Hello you");

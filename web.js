@@ -3,9 +3,12 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
+buf = new Buffer(256);
+buf.write(fs.readFile('index.html'));
+
 app.get('/', function(request, response) {
   response.send('Hello World2!');
-  response.send(fs.readFile('index.html'));
+  response.send(buf.toString('utf-8');
 });
 
 var port = process.env.PORT || 5000;

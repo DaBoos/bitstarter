@@ -3,8 +3,8 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-var buf = new Buffer(256);
-buf.write("Hello youuuuu");
+var buf = new Buffer(25);
+buf.write("SAlut");
 
 app.get('/', function(request, response) {
   response.send(buf.toString('utf-8');

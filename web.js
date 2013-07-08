@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-buf = new Buffer(256);
+var buf = new Buffer(256);
 buf.write("Hello youuuuu");
 
 app.get('/', function(request, response) {

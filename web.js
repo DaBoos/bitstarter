@@ -7,7 +7,6 @@ buf = new Buffer(256);
 buf.write(fs.readFile('index.html'));
 
 app.get('/', function(request, response) {
-  response.send('Hello World2!');
   response.send(buf.toString('utf-8');
 });
 
